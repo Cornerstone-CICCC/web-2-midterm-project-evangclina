@@ -5,8 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
+    <!-- logo font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- body font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
-<body>
-    <script src="./index.js"></script>
+<body class="dark-mode">
+    <header>
+        <nav>
+            <div class=logo>
+                <img src="./assets/film2.png" alt="Heartfelt Films logo">
+                <h3>Heartfelt Films</h3>
+            </div>
+            <div class="nav">
+                <ul class="menu-list">
+                    <li><a href="./about.html">about us</a></li>
+                </ul>
+                <div class="switch">
+                    <input type="checkbox" id="dark-mode-toggle">
+                    <label for="dark-mode-toggle"></label>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="home">
+            <div class="search-bar">
+                <input id="search" type="search">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#5f6368"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+            </div>
+        </div>
+        <div class="movies">
+            <h2>Movies </h2>
+            <div class="movie-wrapper">
+                <!-- Movie cards go here -->
+            </div>
+        </div>
+        <div class="tvseries">
+            <h2>TV Series </h2>
+            <div class="series-wrapper">
+                <!-- TV series cards go here  -->
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright © Heartfelt Films </p>
+    </footer>
+    <script src="./js/index.js"></script>
 </body>
 </html>

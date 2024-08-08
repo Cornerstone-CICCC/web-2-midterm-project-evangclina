@@ -1,0 +1,176 @@
+body header nav {
+  background-color: #ffccd5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3% 0 3%;
+}
+body header nav .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body header nav .logo img {
+  width: 40px;
+}
+body header nav .logo h3 {
+  font-family: "Dancing Script", cursive;
+  color: #ff8fa3;
+}
+body header nav .nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  align-items: center;
+}
+body header nav .nav .menu-list {
+  list-style-type: none;
+}
+body header nav .nav .menu-list li a {
+  text-decoration: none;
+  color: #ff85a1;
+  transition: all 0.3s linear;
+}
+body header nav .nav .menu-list li a:hover {
+  cursor: pointer;
+  color: #949393;
+}
+body header nav .nav .switch label {
+  width: 50px;
+  height: 25px;
+  position: relative;
+  display: block;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+body header nav .nav .switch label::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background-color: pink;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s linear;
+}
+body header nav .nav .switch input {
+  width: 0;
+  height: 0;
+  display: none;
+}
+body header nav .nav .switch input:checked + label {
+  background: rgb(61, 59, 59);
+}
+body header nav .nav .switch input:checked + label::after {
+  left: 45px;
+  transform: translateX(-100%);
+  background-color: rgb(217, 70, 95);
+}
+
+body main .movies {
+  margin-top: 40px;
+}
+body main .movies h2 {
+  color: rgb(123, 116, 116);
+  font-family: "Work Sans", sans-serif;
+}
+body main .movies .movie-wrapper {
+  display: flex;
+  max-height: 500px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+body main .movies .movie-wrapper::-webkit-scrollbar {
+  width: 0;
+}
+body main .movies .movie-wrapper .card {
+  padding: 0;
+  min-width: 200px;
+  margin-right: 10px;
+  height: 400px;
+  text-align: center;
+  background-color: pink;
+  transition: all 0.3s ease-in-out;
+  font-family: "Work Sans", sans-serif;
+}
+body main .movies .movie-wrapper .card img {
+  max-width: 200px;
+  object-fit: cover;
+}
+
+body main .tvseries h2 {
+  color: rgb(123, 116, 116);
+  font-family: "Work Sans", sans-serif;
+}
+body main .tvseries .series-wrapper {
+  display: flex;
+  max-height: 500px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+body main .tvseries .series-wrapper::-webkit-scrollbar {
+  width: 0;
+}
+body main .tvseries .series-wrapper .card {
+  padding: 0;
+  min-width: 200px;
+  margin-right: 10px;
+  height: 400px;
+  text-align: center;
+  background-color: pink;
+  transition: all 0.3s ease-in-out;
+  font-family: "Work Sans", sans-serif;
+}
+body main .tvseries .series-wrapper .card img {
+  max-width: 200px;
+  object-fit: cover;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  background-color: #fff0f3;
+  width: 100%;
+}
+html body .home {
+  display: flex;
+  align-items: center;
+  height: 30vh;
+  justify-content: center;
+  background-image: url("../assets/hearts.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+html body .home .search-bar {
+  display: flex;
+  align-items: center;
+}
+html body .home .search-bar svg:hover {
+  cursor: pointer;
+}
+html body .home .search-bar input {
+  width: 200px;
+  border: 1px solid rgba(128, 128, 128, 0.756);
+  border-radius: 5px;
+  height: 30px;
+}
+html body footer {
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */

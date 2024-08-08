@@ -1,0 +1,45 @@
+@import "./partials/nav";
+@import "./partials/movie";
+@import "./partials/series";
+*{
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+    body{
+        background-color: #fff0f3;
+        width:100%;
+        .home{
+            display: flex; 
+            align-items: center;
+            height: 30vh; 
+            justify-content: center;
+            background-image: url("../assets/hearts.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            .search-bar{
+                display: flex;
+                align-items: center;
+                svg{
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+                input{
+                    width: 200px;
+                    border: 1px solid rgba(128, 128, 128, 0.756);
+                    border-radius: 5px;
+                    height: 30px;
+                }
+            }
+        }
+        footer{
+            text-align: center;
+            font-family: "Work Sans", sans-serif;;
+        }
+    }
+}
