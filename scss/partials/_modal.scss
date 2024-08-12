@@ -1,0 +1,39 @@
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.8);
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 350px;
+    width: 100%;
+    padding: 2rem;
+    background-color: #fff0f3;
+    text-align: justify;
+    border-radius: 10px;
+    img{
+        border-radius: 8px;
+    }
+}
+
+.modal button {
+    padding: .5rem;
+    background-color: #c5c5c5;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+  
+.modal button:hover {
+    background-color: #949393;
+    // ffe0e9
+}
