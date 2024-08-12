@@ -1,0 +1,162 @@
+body{
+    header{
+        position: sticky; 
+        top: 0;
+        nav{
+            background-color: #ffccd5;
+            display: flex; 
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 3% 0 3%;
+            height: 50px;
+            a{
+                text-decoration: none;
+            }
+            .logo{
+                display: flex; 
+                align-items: center;
+                justify-content: center;
+                img{
+                    width: 40px;
+                }
+                h3{
+                    font-family: "Dancing Script", cursive;
+                    color: #ff8fa3;
+                }
+            }
+            .nav{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                align-items: center;
+                gap:10px;
+                .menu-list{
+                    list-style-type: none;
+                    display: flex; 
+                    align-items: center;
+                    li{
+                        margin: .5em;
+                        a{
+                            font-family: "Work Sans", sans-serif;
+                            text-decoration: none;
+                            color: #ff85a1;
+                            transition: all .3s linear;
+                            &:hover{
+                                cursor: pointer;
+                                color: #949393;
+                            }
+                        }
+                    }
+                }
+                .switch{
+                    label{
+                        width: 50px;
+                        height: 25px; 
+                        position: relative; 
+                        display: block; 
+                        background-color: white;
+                        border-radius: 20px;
+                        box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+                        cursor: pointer;
+                        transition: all .3s linear;
+                        &::after{
+                            content: "";
+                            width: 20px; 
+                            height: 20px; 
+                            position: absolute;
+                            top: 2px; 
+                            left: 2px; 
+                            background-color: pink;
+                            border-radius: 20px;
+                            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+                            transition: all .3s linear;
+                        }
+                    }
+                    input{
+                        width: 0;
+                        height: 0;
+                        display: none;
+                    }
+                    input:checked + label{
+                        background: rgb(61, 59, 59);
+                    }
+                    input:checked + label::after{
+                        left: 45px; 
+                        transform: translateX(-100%);
+                        background-color: rgb(217, 70, 95);
+                    }
+                }
+            }
+            .toggle-btn{
+                display: none;
+            }
+            .close-btn{
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body{
+        header{
+            nav{
+                .nav{
+                    .menu-list{
+                        background: #ffccd5f7;
+                        position: fixed;
+                        top: 0;
+                        z-index: 2;
+                        right: -200px;
+                        width: 150px;
+                        height: 100vh;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        justify-content: start;
+                        padding-top: 80px;
+                        padding-left: 20px;
+                        transition: right 0.5s ease-in-out;
+                        li{
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+                .close-btn{
+                    display: block;
+                    position: absolute;
+                    top: 25px; 
+                    left: 25px; 
+                    cursor: pointer;
+                }
+                .toggle-btn{
+                    display: block;
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+    .darkmode{
+        header{
+            nav{
+                .nav{
+                    .menu-list{
+                        background-color: #89023e;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px){
+    body{
+        header{
+            nav{
+                height: 60px;
+            }
+        }
+    }
+}

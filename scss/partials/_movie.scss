@@ -1,0 +1,112 @@
+body{
+    main{
+        .movies{
+            h2{
+                color: rgb(123, 116, 116);
+                font-family: "Work Sans", sans-serif;
+                font-size: 30px;
+                margin-left: 0;
+            }
+            margin: 0 10px 0 10px;
+            padding-top: 60px;
+
+            h4{
+                color: rgb(123, 116, 116);
+                font-family: "Work Sans", sans-serif;
+                font-weight: 600;
+                font-size: 20px;
+                margin: 20px 0 5px 0;
+            }
+            .movie-wrapper{
+                display: flex;
+                gap: 10px;
+                overflow-x: auto;
+                scroll-behavior: smooth;
+                &::-webkit-scrollbar{
+                    width: 0;
+                }
+                .card{
+                    border-radius: 8px;
+                    padding: 0;
+                    min-width: 200px;
+                    height: 380px;
+                    text-align: center;
+                    background-color: pink;
+                    transition: all .3s ease-in-out;
+                    font-family: "Work Sans", sans-serif;
+                    img{
+                        border-radius: 8px;
+                        max-width: 200px;
+                        object-fit: cover;
+                    }
+                    .movie-title{
+                        display: flex; 
+                        align-items: center;
+                        justify-content: center;
+                        height: 18%;
+                    }
+                }
+            }
+            .movie-two{
+                display: flex;
+                gap: 10px;
+                overflow-x: auto;
+                scroll-behavior: smooth;
+                &::-webkit-scrollbar{
+                    width: 0;
+                }
+                .card{
+                    border-radius: 8px;
+                    padding:0;
+                    min-width: 200px;
+                    height: 380px;
+                    text-align: center;
+                    background-color: pink;
+                    transition: all .3s ease-in-out;
+                    font-family: "Work Sans", sans-serif;
+                    img{
+                        border-radius: 8px;
+                        max-width: 200px;
+                        object-fit: cover;
+                    }
+                    .movie-title{
+                        display: flex; 
+                        align-items: center;
+                        justify-content: center;
+                        height: 18%;
+                    }
+                }
+            }
+            .movie-three{
+                display: flex;
+                gap: 10px;
+                overflow-x: auto;
+                scroll-behavior: smooth;
+                &::-webkit-scrollbar{
+                    width: 0;
+                }
+                .card{
+                    border-radius: 8px;
+                    padding: 0;
+                    min-width: 200px;
+                    height: 380px;
+                    text-align: center;
+                    background-color: pink;
+                    transition: all .3s ease-in-out;
+                    font-family: "Work Sans", sans-serif;
+                    img{
+                        border-radius: 8px;
+                        max-width: 200px;
+                        object-fit: cover;
+                    }
+                    .movie-title{
+                        display: flex; 
+                        align-items: center;
+                        justify-content: center;
+                        height: 18%;
+                    }
+                }
+            }
+        }
+    }
+}

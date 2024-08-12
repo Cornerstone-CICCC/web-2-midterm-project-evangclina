@@ -1,0 +1,626 @@
+body header {
+  position: sticky;
+  top: 0;
+}
+body header nav {
+  background-color: #ffccd5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3% 0 3%;
+  height: 50px;
+}
+body header nav a {
+  text-decoration: none;
+}
+body header nav .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body header nav .logo img {
+  width: 40px;
+}
+body header nav .logo h3 {
+  font-family: "Dancing Script", cursive;
+  color: #ff8fa3;
+}
+body header nav .nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+body header nav .nav .menu-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+body header nav .nav .menu-list li {
+  margin: 0.5em;
+}
+body header nav .nav .menu-list li a {
+  font-family: "Work Sans", sans-serif;
+  text-decoration: none;
+  color: #ff85a1;
+  transition: all 0.3s linear;
+}
+body header nav .nav .menu-list li a:hover {
+  cursor: pointer;
+  color: #949393;
+}
+body header nav .nav .switch label {
+  width: 50px;
+  height: 25px;
+  position: relative;
+  display: block;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+body header nav .nav .switch label::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background-color: pink;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s linear;
+}
+body header nav .nav .switch input {
+  width: 0;
+  height: 0;
+  display: none;
+}
+body header nav .nav .switch input:checked + label {
+  background: rgb(61, 59, 59);
+}
+body header nav .nav .switch input:checked + label::after {
+  left: 45px;
+  transform: translateX(-100%);
+  background-color: rgb(217, 70, 95);
+}
+body header nav .toggle-btn {
+  display: none;
+}
+body header nav .close-btn {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  body header nav .nav .menu-list {
+    background: rgba(255, 204, 213, 0.968627451);
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    right: -200px;
+    width: 150px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding-top: 80px;
+    padding-left: 20px;
+    transition: right 0.5s ease-in-out;
+  }
+  body header nav .nav .menu-list li {
+    margin-bottom: 10px;
+  }
+  body header nav .close-btn {
+    display: block;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+  body header nav .toggle-btn {
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+  .darkmode header nav .nav .menu-list {
+    background-color: #89023e;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body header nav {
+    height: 60px;
+  }
+}
+body main .movies {
+  margin: 0 10px 0 10px;
+  padding-top: 60px;
+}
+body main .movies h2 {
+  color: rgb(123, 116, 116);
+  font-family: "Work Sans", sans-serif;
+  font-size: 30px;
+  margin-left: 0;
+}
+body main .movies h4 {
+  color: rgb(123, 116, 116);
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 20px 0 5px 0;
+}
+body main .movies .movie-wrapper {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+body main .movies .movie-wrapper::-webkit-scrollbar {
+  width: 0;
+}
+body main .movies .movie-wrapper .card {
+  border-radius: 8px;
+  padding: 0;
+  min-width: 200px;
+  height: 380px;
+  text-align: center;
+  background-color: pink;
+  transition: all 0.3s ease-in-out;
+  font-family: "Work Sans", sans-serif;
+}
+body main .movies .movie-wrapper .card img {
+  border-radius: 8px;
+  max-width: 200px;
+  object-fit: cover;
+}
+body main .movies .movie-wrapper .card .movie-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 18%;
+}
+body main .movies .movie-two {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+body main .movies .movie-two::-webkit-scrollbar {
+  width: 0;
+}
+body main .movies .movie-two .card {
+  border-radius: 8px;
+  padding: 0;
+  min-width: 200px;
+  height: 380px;
+  text-align: center;
+  background-color: pink;
+  transition: all 0.3s ease-in-out;
+  font-family: "Work Sans", sans-serif;
+}
+body main .movies .movie-two .card img {
+  border-radius: 8px;
+  max-width: 200px;
+  object-fit: cover;
+}
+body main .movies .movie-two .card .movie-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 18%;
+}
+body main .movies .movie-three {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+body main .movies .movie-three::-webkit-scrollbar {
+  width: 0;
+}
+body main .movies .movie-three .card {
+  border-radius: 8px;
+  padding: 0;
+  min-width: 200px;
+  height: 380px;
+  text-align: center;
+  background-color: pink;
+  transition: all 0.3s ease-in-out;
+  font-family: "Work Sans", sans-serif;
+}
+body main .movies .movie-three .card img {
+  border-radius: 8px;
+  max-width: 200px;
+  object-fit: cover;
+}
+body main .movies .movie-three .card .movie-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 18%;
+}
+
+body main .tvseries {
+  margin: 0px 10px 0 10px;
+  padding-top: 60px;
+}
+body main .tvseries h2 {
+  color: rgb(123, 116, 116);
+  font-family: "Work Sans", sans-serif;
+  font-size: 30px;
+}
+body main .tvseries h4 {
+  color: rgb(123, 116, 116);
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 20px 0 5px 0;
+}
+body main .tvseries .series-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 10px;
+}
+body main .tvseries .series-wrapper::-webkit-scrollbar {
+  width: 0;
+}
+body main .tvseries .series-wrapper .card {
+  border-radius: 10px;
+  padding: 0;
+  min-width: 200px;
+  height: 380px;
+  text-align: center;
+  background-color: pink;
+  transition: all 0.3s ease-in-out;
+  font-family: "Work Sans", sans-serif;
+}
+body main .tvseries .series-wrapper .card img {
+  border-radius: 10px;
+  max-width: 200px;
+  object-fit: cover;
+}
+body main .tvseries .series-wrapper .card .serie-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 18%;
+}
+body main .tvseries .series-two {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 10px;
+}
+body main .tvseries .series-two::-webkit-scrollbar {
+  width: 0;
+}
+body main .tvseries .series-two .card {
+  border-radius: 8px;
+  padding: 0;
+  min-width: 200px;
+  height: 380px;
+  text-align: center;
+  background-color: pink;
+  transition: all 0.3s ease-in-out;
+  font-family: "Work Sans", sans-serif;
+}
+body main .tvseries .series-two .card img {
+  border-radius: 8px;
+  max-width: 200px;
+  object-fit: cover;
+}
+body main .tvseries .series-two .card .serie-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 18%;
+}
+
+body main {
+  font-family: "Work Sans", sans-serif;
+  color: rgb(123, 116, 116);
+}
+body main .about-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+body main .about-container .image img {
+  max-width: 200px;
+}
+body main .about-container .content {
+  width: 300px;
+  text-align: justify;
+}
+body main .about-container .content h1 {
+  margin-bottom: 10px;
+  text-align: center;
+  color: rgb(96, 94, 94);
+}
+body main .about-box {
+  padding: 0 30px 0 30px;
+  margin-top: 40px;
+}
+body main .about-box h2 {
+  color: rgb(96, 94, 94);
+  margin-bottom: 10px;
+}
+body main .about-box ul {
+  padding-left: 20px;
+}
+body main .about-box ul li {
+  margin-bottom: 10px;
+}
+body main .about-box p {
+  text-align: justify;
+}
+body main #heart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main #heart img {
+  display: block;
+  margin: auto;
+  max-width: 300px;
+}
+
+@media only screen and (min-width: 760px) {
+  body main .about-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  body main .about-container .content {
+    width: 500px;
+  }
+  body main .about-box {
+    padding: 0 10% 0 10%;
+  }
+}
+body .search-title {
+  text-align: center;
+  margin-top: 20px;
+}
+body .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .container .box {
+  margin-top: 30px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+}
+body .container .box .search-card {
+  padding: 0;
+  text-align: center;
+  background-color: pink;
+  width: 160px;
+  height: 290px;
+}
+body .container .box .search-card img {
+  max-width: 160px;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 760px) {
+  body .container .box {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  body .container .box .search-card {
+    border-radius: 8px;
+    padding: 0;
+    text-align: center;
+    background-color: pink;
+    width: 200px;
+    height: 370px;
+  }
+  body .container .box .search-card img {
+    max-width: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  body .container .box .search-card .movie-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 18%;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  body .container .box {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  body .container .box {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px;
+  }
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 350px;
+  width: 100%;
+  padding: 2rem;
+  background-color: #fff0f3;
+  text-align: justify;
+  border-radius: 10px;
+}
+.modal img {
+  border-radius: 8px;
+}
+
+.modal button {
+  padding: 0.5rem;
+  background-color: #c5c5c5;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.modal button:hover {
+  background-color: #949393;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+html body {
+  background-color: #fff0f3;
+  width: 100%;
+}
+html body .home {
+  display: flex;
+  align-items: center;
+  height: 45vh;
+  justify-content: center;
+  background-image: url("../assets/cloud.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+html body .home .search-bar form {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+html body .home .search-bar form button {
+  border: none;
+  background-color: transparent;
+}
+html body .home .search-bar form button svg:hover {
+  cursor: pointer;
+}
+html body .home .search-bar form input {
+  width: 250px;
+  border: 1px solid rgba(128, 128, 128, 0.756);
+  border-radius: 5px;
+  height: 30px;
+  padding: 10px;
+  font-family: "Work Sans", sans-serif;
+}
+html body footer {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  height: 2rem;
+  font-size: 10px;
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  color: rgb(123, 116, 116);
+}
+
+.dark-mode {
+  background-color: #30343f;
+}
+.dark-mode header nav {
+  background-color: #880d1e;
+}
+.dark-mode header nav .logo h3 {
+  color: #30343f;
+}
+.dark-mode header nav .nav ul li a {
+  color: #1b2021;
+}
+.dark-mode header nav .nav ul li a:hover {
+  color: #30343f;
+}
+.dark-mode main .home {
+  background-image: url("../assets/grey.jpg");
+}
+.dark-mode main .home .search-bar input {
+  border: 1px solid #dd2d4a;
+}
+.dark-mode main .home .search-bar svg {
+  fill: #dd2d4a;
+}
+.dark-mode main .movies h2 {
+  color: rgb(238, 230, 230);
+}
+.dark-mode main .movies h4 {
+  color: rgb(238, 230, 230);
+}
+.dark-mode main .movies .movie-two .card {
+  background-color: #89023e;
+}
+.dark-mode main .movies .movie-three .card {
+  background-color: #89023e;
+}
+.dark-mode main .movies .movie-wrapper .card {
+  background-color: #89023e;
+}
+.dark-mode main .tvseries h2 {
+  color: rgb(238, 230, 230);
+}
+.dark-mode main .tvseries h4 {
+  color: rgb(238, 230, 230);
+}
+.dark-mode main .tvseries .series-wrapper .card {
+  background-color: #89023e;
+}
+.dark-mode main .tvseries .series-two .card {
+  background-color: #89023e;
+}
+.dark-mode footer p {
+  color: rgb(238, 230, 230);
+}
+.dark-mode::-webkit-scrollbar {
+  width: 12px;
+}
+.dark-mode::-webkit-scrollbar-thumb {
+  background-color: #89023e;
+  border-radius: 20px;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: pink;
+  border-radius: 20px;
+}
+
+@media only screen and (min-width: 760px) {
+  body main .home .search-bar form input {
+    width: 400px;
+  }
+  body footer p {
+    font-size: 15px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

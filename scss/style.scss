@@ -1,0 +1,188 @@
+@import "./partials/nav";
+@import "./partials/movie";
+@import "./partials/series";
+@import "./partials/about";
+@import "./partials/search";
+@import "./partials/modal";
+
+*{
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+    body{
+        background-color: #fff0f3;
+        width:100%;
+        .home{
+            display: flex; 
+            align-items: center;
+            height: 45vh; 
+            justify-content: center;
+            background-image: url("../assets/cloud.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            .search-bar{
+                form{
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    button{
+                        border: none; 
+                        background-color: transparent;
+                        svg{
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    input{
+                        width: 250px;
+                        border: 1px solid rgba(128, 128, 128, 0.756);
+                        border-radius: 5px;
+                        height: 30px;
+                        padding: 10px;
+                        font-family: "Work Sans", sans-serif;
+                    }
+                }
+            }
+        }
+        footer{
+            display: flex;
+            align-items: end;
+            justify-content: end;
+            margin-right: 10px;
+            margin-bottom: 5px;
+            height: 2rem;
+            font-size: 10px;
+            text-align: center;
+            font-family: "Work Sans", sans-serif;
+            color: rgb(123, 116, 116);
+        }
+    }
+}
+
+.dark-mode{
+    background-color: #30343f;
+    header{
+        nav{
+            background-color: #880d1e;
+            .logo{
+                h3{
+                    color:#30343f;
+                }
+            }
+            .nav{
+                ul{
+                    li{
+                        a{
+                            color: #1b2021;
+                            &:hover{
+                                color: #30343f;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    main{
+        .home{
+            background-image: url("../assets/grey.jpg");
+            .search-bar{
+                input{
+                    border: 1px solid #dd2d4a;
+                }
+                svg{
+                    fill: #dd2d4a;
+                }
+            }
+        }
+        .movies{
+            h2{
+                color: rgb(238, 230, 230); 
+            }
+            h4{
+                color: rgb(238, 230, 230);
+            }
+            .movie-two{
+                .card{
+                    background-color: #89023e;
+                }
+            }
+            .movie-three{
+                .card{
+                    background-color: #89023e;
+                }
+            }
+            .movie-wrapper{
+                .card{
+                    background-color: #89023e;
+                }
+            }
+
+        }
+        .tvseries{
+            h2{
+                color: rgb(238, 230, 230); 
+            }
+            h4{
+                color: rgb(238, 230, 230);
+            }
+            .series-wrapper{
+                .card{
+                    background-color: #89023e;
+                }
+            }
+            .series-two{
+                .card{
+                    background-color: #89023e;
+                }
+            }
+        }
+    }
+    footer{
+        p{
+            color: rgb(238, 230, 230); 
+        }
+    }
+    &::-webkit-scrollbar {
+        width: 12px;               
+      }
+      
+    &::-webkit-scrollbar-thumb {
+        background-color: #89023e;    
+        border-radius: 20px;      
+    }
+}
+body::-webkit-scrollbar {
+    width: 12px;               
+  }
+  
+body::-webkit-scrollbar-thumb {
+    background-color: pink;    
+    border-radius: 20px;      
+}
+@media only screen and (min-width: 760px){
+    body{
+        main{
+            .home{
+                .search-bar{
+                    form{
+                        input{
+                            width: 400px;
+                        }
+                    }
+                }
+            }
+        }
+        footer{
+            p{
+                font-size: 15px;
+            }
+        }
+    }
+}
