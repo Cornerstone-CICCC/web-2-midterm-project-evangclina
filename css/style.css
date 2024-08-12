@@ -384,6 +384,10 @@ body main #heart img {
     padding: 0 10% 0 10%;
   }
 }
+body .search-title {
+  text-align: center;
+  margin-top: 20px;
+}
 body .container {
   display: flex;
   align-items: center;

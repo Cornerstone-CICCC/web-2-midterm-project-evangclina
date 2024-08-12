@@ -247,7 +247,13 @@ async function buildSearch(){
   const searchOutput = await search(searchInput)
   console.log(searchOutput)
 
+  const finalInput = searchInput.charAt(0).toUpperCase() + searchInput.slice(1);
+  let title = document.createElement("h1")
+  title.innerHTML = `Search for: ${finalInput}`
+  document.querySelector(".search-title").append(title)
+
   searchOutput.results.forEach((result)=>{
+
     let divCard = document.createElement("div")
     divCard.classList.add("search-card")
     divCard.innerHTML= `<img src="https://image.tmdb.org/t/p/w500${result.poster_path}"><div class="movie-title"><h3>${result.title}</h3</div>`
